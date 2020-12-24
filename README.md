@@ -35,7 +35,9 @@
 
 ## G-Code  
   - ### Inkscape  
-    - Documentation: http://cubiio.muherz.com/file_convert_text.html  
+    - **Resources: **  
+      - [Official guide for using Inkscape to print vector graphics](http://cubiio.muherz.com/file_convert_text.html)  
+      - [A4 Template for Cubiio 2](https://cubiio.com/wp-content/uploads/2020/11/cubiio2_template_A4.zip)  
     - **G-Code Generation parameters (from official docs):**  
       - Laser ON command: M03  
       - Laser OFF command: M05  
