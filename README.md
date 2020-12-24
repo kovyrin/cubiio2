@@ -1,5 +1,4 @@
-# Cubiio 2 Notes, Links, Resources
-
+# Cubiio 2
 ## Abstract  
   - Back in Spring 2020, I have backed a project on Kickstarter – an attempt at making a thin desktop laser cutter/engraver – that project was [Cubiio 2](https://www.kickstarter.com/projects/cubiio/cubiio-2-laser-cutter-and-metal-engraver-with-autofocus). They succeeded at raising a ton of money from multiple crowd-funding platforms and the project has started shipping in December 2020.  
   - I have received my unit on December 18th, 2020 and immediately started seeing a lot of rough edges around software, documentation and tooling for what seemed like a really nice device.  
@@ -29,6 +28,9 @@
       - > This error message means that the machine did not execute the "Go Home" program after completing the connection, or the "Go Home" did not complete.<br/><br/>After clicking the "Go Home" button, you will see the laser head move in the x and y directions, and finally stop at the upper right corner of the machine.  
     - After some troubleshooting, we've realized, that the machine has two separate sensors to detect if the lid is closed and it refuses to execute any commands if it is not.  
       - In my case, the lid was not closed completely on one side (had to push it to the side a little bit for it to close properly).  
+  - **No SVG support in iOS app**  
+    - [According to the team](https://www.kickstarter.com/projects/cubiio/cubiio-2-laser-cutter-and-metal-engraver-with-autofocus/comments?comment=Q29tbWVudC0zMTAyNzAzNw%3D%3D&reply=Q29tbWVudC0zMTAzNDEzMA%3D%3D), it should be available soon  
+      - > The app will support native SVG in 1 or 2 months. For now, SVG files can be converted to g-code via Inkscape. The following instructions can help you step by step. Thank you. <br/><br/>https://cubiio.muherz.com/file_convert_text.html  
 
 ## GCode  
   - ### Inkscape  
@@ -85,9 +87,11 @@
             - Passes: 1  
 
 ## Useful Resources  
+  - [Official Downloads](https://cubiio.com/support/download/)  
   - [Official App Manual](https://cubiio.com/wp-content/uploads/2020/11/%E8%BB%9F%E9%AB%94%E8%AA%AA%E6%98%8E%E6%9B%B8%E8%8B%B1-s.pdf)  
   - [Official Quick guide](https://cubiio.com/support/guide/cubiio2-quick-guide/)  
   - [Recommended parameters for the laser](https://cubiio.com/wp-content/uploads/2020/12/Recommended-parameters-for-common-materials.pdf)  
   - **Inkscape**  
     - https://github.com/KnoxMakers/KM-Laser  
     - http://cubiio.muherz.com/file_convert_text.html  
+  - [Facebook Group for Cubiio users](https://www.facebook.com/groups/175632133023402)  
