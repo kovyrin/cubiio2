@@ -4,7 +4,7 @@
   - I have received my unit on December 18th, 2020 and immediately started seeing a lot of rough edges around software, documentation and tooling for what seemed like a really nice device.  
   - After fighting through a number of issues, working with support and a ton of experimentation, I have ended up with a set of notes on my experience. To help the community cope with the lack of official resources, I have decided to publish my [Roam Research](https://roamresearch.com/) notes in more-less raw format on this page. I'm going to keep the page up to date with my experiences and new information I find on the project or figure out myself.   
   - If you have any additional resources you think would make sense adding here, feel free to [raise an issue](https://github.com/kovyrin/cubiio2/issues/new) or a pull request on GitHub.  
-  - **Last update:** December 23rd, 2020  
+  - **Last update:** December 24th, 2020  
 
 ## Setup and installation  
   - Installed the app from Apple's App Store  
@@ -33,10 +33,10 @@
     - [According to the team](https://www.kickstarter.com/projects/cubiio/cubiio-2-laser-cutter-and-metal-engraver-with-autofocus/comments?comment=Q29tbWVudC0zMTAyNzAzNw%3D%3D&reply=Q29tbWVudC0zMTAzNDEzMA%3D%3D), it should be available soon  
       - > The app will support native SVG in 1 or 2 months. For now, SVG files can be converted to g-code via Inkscape. The following instructions can help you step by step. Thank you. <br/><br/>https://cubiio.muherz.com/file_convert_text.html  
 
-## GCode  
+## G-Code  
   - ### Inkscape  
     - Documentation: http://cubiio.muherz.com/file_convert_text.html  
-    - **GCode Generation parameters (from official docs):**  
+    - **G-Code Generation parameters (from official docs):**  
       - Laser ON command: M03  
       - Laser OFF command: M05  
       - Travel Speed : 600（the max of speed）  
@@ -46,9 +46,9 @@
         - Setting the max power(255)/speed(600mm/min).   
         - You can adjust speed and power in the APP.  
     - **Notes:**  
-      - Did not work, generated gcode crashed the app reliably when loaded  
+      - Did not work, generated G-Code file crashed the app reliably when loaded  
   - ### LaserWeb  
-    - Open-source software for controlling Laser and CNC machines, allows you to use all kinds of vector files with machines working on GCode  
+    - Open-source software for controlling Laser and CNC machines, allows you to use all kinds of vector files with machines working on G-Code  
     - Official site: https://laserweb.yurl.ch/  
     - I've used the hosted version so far: https://laserweb.github.io/LaserWeb4/  
     - **Notes:**  
@@ -56,20 +56,20 @@
         - Machine section:  
           - MACHINE WIDTH: 300  
           - MACHINE HEIGHT: 220  
-        - Gcode section:  
+        - G-Code section:  
           - TOOL ON: M03  
           - TOOL OFF: M05  
           - PWM MIN S VALUE: 0  
           - PWM MAX S VALUE: 255  
-      - ### GCode generation from SVG files:  
+      - ### G-Code generation from SVG files:  
         - Add svg files  
         - Select objects  
-        - Set up gcode for laser engraving (without fill)  
+        - Set up G-Code for laser engraving (without fill)  
           - Click "Create Single"  
           - Select "Laser Cut"  
           - Enter laser power: 100% (the app will override this)  
           - Enter cut rate: 600 (the app will override this)  
-        - Set up gcode for filling  
+        - Set up G-Code for filling  
           - Click "Create Single"  
           - Select "Laser Fill Path"  
           - Select black color for stroke and for fill  
@@ -86,6 +86,19 @@
             - Power: 30%  
             - Speed: 100 (I have a feeling this is not mm/sec, but % because it does not allow you to go higher than 100)  
             - Passes: 1  
+  - ### Commands Reference  
+    - G0 - TRAVEL XY  
+    - G1 - LINEAR XY  
+    - G2 - CW_ARC XYIJ  
+    - G3 - CCW_ARC XYIJ  
+    - G20 - UNIT_INCH  
+    - G21 - UNIT_MM (default)  
+    - G90 - ABSOLUTE (default)  
+    - G91 - INCREMENTAL  
+    - M03 - LASER ON  
+    - M05 - LASER OFF  
+    - F - SPEED 0-600 (mm/min)  
+    - S - POWER 0-255  
 
 ## Useful Resources  
   - [Official Downloads](https://cubiio.com/support/download/)  
@@ -96,3 +109,4 @@
     - https://github.com/KnoxMakers/KM-Laser  
     - http://cubiio.muherz.com/file_convert_text.html  
   - [Facebook Group for Cubiio users](https://www.facebook.com/groups/175632133023402)  
+  - [G-Code Generator](https://www.inosyan.com/gcodegenerator) - tons of resources on using Cubiio (the first model) with Adobe Illustrator.  
