@@ -2,7 +2,8 @@
 ## Abstract  
   - Back in Spring 2020, I have backed a project on Kickstarter – an attempt at making a thin desktop laser cutter/engraver – that project was [Cubiio 2](https://www.kickstarter.com/projects/cubiio/cubiio-2-laser-cutter-and-metal-engraver-with-autofocus). They succeeded at raising a ton of money from multiple crowd-funding platforms and the project has started shipping in December 2020.  
   - I have received my unit on December 18th, 2020 and immediately started seeing a lot of rough edges around software, documentation and tooling for what seemed like a really nice device.  
-  - After fighting through a number of issues, working with support and a ton of experimentation, I have ended up with a set of notes on my experience. To help the community cope with the lack of official resources, I have decided to publish my [Roam Research](https://roamresearch.com/) notes in more-less raw format on this page. I'm going to keep the page up to date with my experiences and new information I find on the project or figure out myself. If you have any additional resources you think would make sense adding here, feel free to raise a Pull Request.  
+  - After fighting through a number of issues, working with support and a ton of experimentation, I have ended up with a set of notes on my experience. To help the community cope with the lack of official resources, I have decided to publish my [Roam Research](https://roamresearch.com/) notes in more-less raw format on this page. I'm going to keep the page up to date with my experiences and new information I find on the project or figure out myself.   
+  - If you have any additional resources you think would make sense adding here, feel free to [raise an issue](https://github.com/kovyrin/cubiio2/issues/new) or a pull request on GitHub.  
   - **Last update:** December 23rd, 2020  
 
 ## Setup and installation  
