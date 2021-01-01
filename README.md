@@ -43,6 +43,35 @@
 
   
 
+## Tips and Tricks  
+  - Here I try to collect different settings, processes, etc I've used for engraving/cutting different materials, different content, etc.  
+  - ### Engraving Black Walnut  
+    - Burns really quickly, which allows for very high-resolution detailed engravings  
+    - 20% at 25 mm/sec with two passes produce a really detailed and stable/deep engraving  
+  - ### Engraving Olive Wood  
+    - Much harder to burn: sapwood is dry and burns easily, heartwood is really oily, which leads to lower details in engravings.  
+    - 50% at 25 mm/sec produces pretty good results both on sapwood and heartwood  
+  - ### Printing vector graphics  
+    - So far, the best process I've found for this is pretty counter-intuitive  
+      - Render the vector picture into a 300-600dpi PNG image  
+      - Send it to your iOS device  
+      - Save the image into your photos (Share -> Save image)  
+      - Add the image to your Cubiio app by clicking the picture icon and selecting the image from the photos.  
+        - This produces a really high-resolution engraving with a lot of small details that are often lost when converting vector to G-Code  
+    - For high-detail engravings, I have found that using lower power initial pass (20-25%) creates a nice detailed foundation, that could be deepened by a subsequent higher-power pass without the loss of detail.  
+      - Doing a higher-power pass in one go produces more burned wood and reduces the details visible in the final result.  
+  - ### Alternative installation (no DHCP tweaking, no IP address).  
+    - Your Cubiio 2 has a pretty name. It is called `cubiio2-<serial number>` where `<serial number>` is specific to your machine. For example `cubiio2-a0d5`.  
+    - It is the same name as  
+      - the WiFi SSID you found when turning on the Cubiio 2 for the first time  
+      - the name of the Cubiio 2 in the Cubiio 2 app  
+    - You can connect to your Cubiio 2 from your browser by referring to  
+      - `http://cubiio2-<SN>.local` (for example: `http://cubiio2-a0d5.local`).   
+        - The .local is very important.  
+    - See [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) for details on how this works.  
+
+  
+
 ## G-Code  
   - ### Inkscape  
     - **Resources:**  
@@ -111,35 +140,6 @@
     - M05 - LASER OFF  
     - F - SPEED 0-600 (mm/min)  
     - S - POWER 0-255  
-
-  
-
-## Tips and Tricks  
-  - Here I try to collect different settings, processes, etc I've used for engraving/cutting different materials, different content, etc.  
-  - ### Engraving Black Walnut  
-    - Burns really quickly, which allows for very high-resolution detailed engravings  
-    - 20% at 25 mm/sec with two passes produce a really detailed and stable/deep engraving  
-  - ### Engraving Olive Wood  
-    - Much harder to burn: sapwood is dry and burns easily, heartwood is really oily, which leads to lower details in engravings.  
-    - 50% at 25 mm/sec produces pretty good results both on sapwood and heartwood  
-  - ### Printing vector graphics  
-    - So far, the best process I've found for this is pretty counter-intuitive  
-      - Render the vector picture into a 300-600dpi PNG image  
-      - Send it to your iOS device  
-      - Save the image into your photos (Share -> Save image)  
-      - Add the image to your Cubiio app by clicking the picture icon and selecting the image from the photos.  
-        - This produces a really high-resolution engraving with a lot of small details that are often lost when converting vector to G-Code  
-    - For high-detail engravings, I have found that using lower power initial pass (20-25%) creates a nice detailed foundation, that could be deepened by a subsequent higher-power pass without the loss of detail.  
-      - Doing a higher-power pass in one go produces more burned wood and reduces the details visible in the final result.  
-  - ### Alternative installation (no DHCP tweaking, no IP address).  
-    - Your Cubiio 2 has a pretty name. It is called `cubiio2-<serial number>` where `<serial number>` is specific to your machine. For example `cubiio2-a0d5`.  
-    - It is the same name as  
-      - the WiFi SSID you found when turning on the Cubiio 2 for the first time  
-      - the name of the Cubiio 2 in the Cubiio 2 app  
-    - You can connect to your Cubiio 2 from your browser by referring to  
-      - `http://cubiio2-<SN>.local` (for example: `http://cubiio2-a0d5.local`).   
-        - The .local is very important.  
-    - See [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) for details on how this works.  
 
   
 
