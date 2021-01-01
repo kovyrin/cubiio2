@@ -131,6 +131,15 @@
         - This produces a really high-resolution engraving with a lot of small details that are often lost when converting vector to G-Code  
     - For high-detail engravings, I have found that using lower power initial pass (20-25%) creates a nice detailed foundation, that could be deepened by a subsequent higher-power pass without the loss of detail.  
       - Doing a higher-power pass in one go produces more burned wood and reduces the details visible in the final result.  
+  - ### Alternative installation (no DHCP tweaking, no IP address).  
+    - Your Cubiio 2 has a pretty name. It is called `cubiio2-<serial number>` where `<serial number>` is specific to your machine. For example `cubiio2-a0d5`.  
+    - It is the same name as  
+      - the WiFi SSID you found when turning on the Cubiio 2 for the first time  
+      - the name of the Cubiio 2 in the Cubiio 2 app  
+    - You can connect to your Cubiio 2 from your browser by referring to  
+      - `http://cubiio2-<SN>.local` (for example: `http://cubiio2-a0d5.local`).   
+        - The .local is very important.  
+    - See [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) for details on how this works.  
 
   
 
@@ -153,5 +162,6 @@
     - Added the Updates History section  
     - Added a Tips and Tricks section  
     - Added the official FAQ link  
+    - Added an [mDNS tip](https://github.com/kovyrin/cubiio2/issues/1) from [TotallyFred](https://github.com/TotallyFred)  
   - December 23rd, 2020  
     - Cleaned up the notes and published the initial version of the document  
